@@ -9,12 +9,13 @@ lETTERS = "QWERTYUIOPASDFGHJKLZXCVBNM"
 def main():
     dict = open("Dictionary.txt", "r")
     words = dict.readlines()
+    test = "Hello"
     length = 10
     width = 30
-    height = 15
+    height = 25
+    orientation = 0
     wordBank = []
     grid = [['A'] * height for i in range(width)]
-
 
 
     for n in range(length):
@@ -24,16 +25,14 @@ def main():
         for x in range(width):
             grid[x][y] = lETTERS[rand.randint(0, 25)]
 
+    orientation = rand.randint(0, 7)
+
+
     for y in range(height):
-        print("\n")
+        print()
         for x in range(width):
             print(grid[x][y], end="\t")
 
-    result = ''
-    for c in "text":
-        result = result + c + '\u0336'
-
-    print(result)
 
 
 
